@@ -35,7 +35,7 @@ class ParallelDsApp(ChrisApp):
     MAX_NUMBER_OF_WORKERS = 64
     MIN_NUMBER_OF_WORKERS = 1
     CPU_LIMIT       = '1000m'
-    MEMORY_LIMIT    = '100Mi'
+    MEMORY_LIMIT    = '128Mi'
 
     # Fill out this with key-value output descriptive info (such as an output file path
     # relative to the output dir) that you want to save to the output meta file when
