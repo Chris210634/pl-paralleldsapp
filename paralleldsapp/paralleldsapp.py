@@ -34,8 +34,10 @@ class ParallelDsApp(ChrisApp):
     VERSION         = '0.1'
     MAX_NUMBER_OF_WORKERS = 64
     MIN_NUMBER_OF_WORKERS = 1
-    CPU_LIMIT       = '1000m'
-    MEMORY_LIMIT    = '128Mi'
+    MAX_CPU_LIMIT       = '4000m'
+    MIN_CPU_LIMIT       = '1000m'
+    MAX_MEMORY_LIMIT    = '8Gi'
+    MIN_MEMORY_LIMIT    = '128Mi'
 
     # Fill out this with key-value output descriptive info (such as an output file path
     # relative to the output dir) that you want to save to the output meta file when
@@ -94,8 +96,10 @@ class ParallelDsApp(ChrisApp):
         repres['execshell'] = self.EXECSHELL
         repres['max_number_of_workers'] = self.MAX_NUMBER_OF_WORKERS
         repres['min_number_of_workers'] = self.MIN_NUMBER_OF_WORKERS
-        repres['memory_limit'] = self.MEMORY_LIMIT
-        repres['cpu_limit'] = self.CPU_LIMIT 
+        repres['max_memory_limit'] = self.MAX_MEMORY_LIMIT
+        repres['max_cpu_limit'] = self.MAX_CPU_LIMIT 
+        repres['min_memory_limit'] = self.MIN_MEMORY_LIMIT
+        repres['min_cpu_limit'] = self.MIN_CPU_LIMIT 
         return repres
 
 
